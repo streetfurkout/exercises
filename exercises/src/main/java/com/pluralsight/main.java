@@ -37,6 +37,15 @@ public class main {
         totalCost = (count* unitPrice) + (unitPrice*taxRate);
         System.out.println(totalCost);
         }
+
+    public static void main4(String[] args) {
+
+        int answer = 0;
+        answer += 10;
+        answer -=5;
+        answer %=5;
+        answer *=2;
+    }
     }
 
 
