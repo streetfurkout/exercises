@@ -26,14 +26,31 @@ public class SandwichPriceCalculator {
 
         } else {
             System.out.println("Invalid Size");
+            return;
         }
+
+        //Ask for quantity
+        System.out.println("How many sandwich you would like to take?");
+        double qt = scanner.nextDouble();
 
         //Ask for customer`s age and if eligible do discount
         System.out.println("Please enter your age!");
-        int age;
+        int age = scanner.nextInt();
+
+        double discountPercentage = 0;
         if (age <= 17) {
+            discountPercentage = 0.1;
 
+        } else if (age >= 65) {
+            discountPercentage = 0.2;
         }
-    }
-}
 
+        //total payment
+
+        double payment = (basePrice * (1 - discountPercentage)) * qt;
+
+        //display payment
+        System.out.println("Your total due is: " + payment);
+    }
+
+}
